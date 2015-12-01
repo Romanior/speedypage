@@ -1,0 +1,122 @@
+/********************************************************
+
+				user forms
+
+********************************************************/
+.user-form{
+	margin-bottom: 32px;
+}
+
+.user-form--small {
+	max-width: 416px;
+}
+
+/* form layout*/
+.user-form__col-sup {
+	width: 23.5%;
+}
+
+.user-form__col-main {
+	margin-left: 20px;
+	width: calc(76.5% - 20px);
+}
+
+/* form elements*/
+.user-form__row {
+	margin-bottom: 8px;
+}
+
+.user-form__row--actions{
+	text-align: right;
+}
+
+.user-form__label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 2px;
+}
+
+/* I assume all labels are required, but should be modificator ofc */
+.user-form__label:after {
+	content: '*';
+	font-weight: normal;
+}
+
+.user-form__input {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	box-sizing: border-box;
+	color: #333;
+	font: 13px Arial, Helvetica, sans-serif;
+	line-height: 18px;
+	padding: 6px 11px;
+	width: 100%;
+}
+
+.ie9 .user-form__input{
+	line-height: 1;
+}
+
+.user-form__input:focus,
+.user-form__input:active{
+	outline: none;
+	border-color: blue;
+}
+
+.user-form__input--invalid:required:invalid{
+	background: #fdedeb;
+	border-color: #f54840;
+}
+
+.ie9 .user-form__input--invalid{
+	background: #fdedeb;
+	border-color: #f54840;
+}
+
+/********************************************************
+
+				form alert
+
+ <p class="user-form__alert user-form__alert--success">
+	Message successfully sent
+ </p>
+
+********************************************************/
+
+.user-form__alert {
+	background: #f5f5f5;
+	border-left: 10px solid #ccc;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 21px;
+	margin-bottom: 32px;
+	padding: 10px 15px 11px;
+}
+
+.user-form__alert--success {
+	border-left-color: #cedc03;
+}
+
+
+
+/********************************************************
+
+			btns, should be separated
+
+********************************************************/
+
+.btn {
+	border: none; /* Chrome,Safari4+ */
+	border-radius: 3px; /* Chrome10+,Safari5.1+ */
+	color: #333; /* Opera 11.10+ */
+	font: 13px Arial, Helvetica, sans-serif; /* W3C */
+	font-weight: bold; /* IE6-8 */
+	line-height: 21px;
+	padding: 6px 20px;
+	cursor: pointer;
+}
+
+.btn--success{
+	background: #333;
+	color: #fff;
+}

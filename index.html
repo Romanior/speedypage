@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="x-ua-compatible" content="IE=Edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="UTF-8">
+    <title>Page Performace Tool</title>
+    <!--css reset-->
+    <link rel="stylesheet" href="styles/stylesheet.css">
+
+    <!--[if lte IE 9]>
+      <script src="scripts/performanceNowPolyfill.js"></script>
+    <![endif]-->
+
+    <script src="scripts/Metric.js"></script>
+    <script src="scripts/javascript.js"></script>
+  </head>
+
+  <!--[if lte IE 9]>
+    <body class="ie9">
+  <![endif]-->
+  <!--[if !IE]>-->
+    <body>
+  <!--<![endif]-->
+
+    <div class="content-wrapper">
+      <!--start of branding-->
+      <div class="branding">
+        <div class="branding__content">
+  
+        </div>
+      </div>
+      <!--end of branding-->
+
+      <!--start of page content-->
+      <div class="content">
+        <h1 class="content__heading">New Message</h1>
+
+        <!--start of message form -->
+        <form class="user-form user-form--small" id="messageForm" novalidate>
+
+          <p class="user-form__alert user-form__alert--success hide" id="messageFormAlert"></p>
+
+          <div class="row">
+            <div class="col user-form__col-sup">
+              <img class="responsive-img" src="images/user-96x96.jpg" width="96" height="96" title="User avatar">
+            </div>
+
+            <div class="col user-form__col-main">
+              <div class="user-form__row">
+                <label class="user-form__label" for="messageFormName">Name</label>
+                <input class="user-form__input" type="text" id="messageFormName" placeholder="e.g. John Fisher" required>
+              </div>
+              <div class="user-form__row">
+                <label class="user-form__label" for="messageFormEmail">Email</label>
+                <input class="user-form__input" type="email" id="messageFormEmail" required>
+              </div>
+              <div class="user-form__row">
+                <label class="user-form__label" for="messageFormPhone">Phone</label>
+                <input class="user-form__input" type="text" id="messageFormPhone" placeholder="e.g. +49 40 12345678" required>
+              </div>
+              <div class="user-form__row">
+                <label class="user-form__label" for="messageFormMessage">Message</label>
+                <textarea rows="6" class="user-form__input" id="messageFormMessage" placeholder="e.g. what you ever wanted to tell" required></textarea>
+              </div>
+              <div class="user-form__row user-form__row--actions">
+                <button type="submit" id="messageFormSubmit" class="btn btn--success">Send</button>
+              </div>
+            </div>
+          </div>
+
+        </form>
+        <!--end of message form -->
+
+      </div>
+      <!--end of page content-->
+
+    </div>
+  </body>
+</html>

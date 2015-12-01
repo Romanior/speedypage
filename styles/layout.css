@@ -1,0 +1,98 @@
+/********************************************************
+
+            common styles
+
+********************************************************/
+
+body {
+	background: #f2f2f2;
+	color: #333;
+	font: 13px Arial, Helvetica, sans-serif;
+	line-height: 18px;
+	margin-bottom: 80px;
+}
+
+/********************************************************
+
+			general content
+
+********************************************************/
+
+.content {
+	background: #fff;
+	margin: 0 auto;
+	max-width: 960px;
+	padding: 24px;
+}
+
+.content__heading {
+	font-size: 26px;
+	font-weight: normal;
+	line-height: 32px;
+	margin-bottom: 32px;
+}
+
+/********************************************************
+
+			branding
+
+********************************************************/
+
+.branding {
+	background: #333;
+	margin-bottom: 28px;
+	min-height: 50px;
+}
+
+.branding__content {
+	margin: 0 auto;
+	max-width: 960px;
+	padding: 7px 24px;
+}
+
+.branding__logo {
+	display: block;
+}
+
+/********************************************************
+
+		simple grid
+
+		this one inspired by http://yui.yahooapis.com/3.18.1/build/cssgrids/cssgrids-min.css
+
+********************************************************/
+
+.row {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	letter-spacing: -0.31em;
+	*letter-spacing: normal;
+	*word-spacing: -0.43em;
+	text-rendering: optimizespeed;
+	-webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+}
+
+.col {
+	display: inline-block;
+	*display: inline;
+	letter-spacing: normal;
+	vertical-align: top;
+	word-spacing: normal;
+	zoom: 1;
+	text-rendering: auto;
+}
+
+
+/********************************************************
+
+			utils	
+
+********************************************************/
+.hide{
+	display: none;
+}
+
+.show{
+	display: block;
+}
