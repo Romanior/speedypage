@@ -1,53 +1,52 @@
 # Speedypage
-Collect performance and ajax metrics, send to the server by 'beacon'.
+Collect performance and ajax metrics, send to the server by 'beacon', e.g.
+```
+http://0.0.0.0:8000/images/beacon.gif?timeToConnect=1&timeToFirstByte=3&timeToCompleteContentDownload=5&timeToDomInteractive=184&timeToLoad=437&timeToFirstPaint=448
+```
 
 ```
 >>> metric
 >>> Object { ajaxMetrics: {Array}, metrics: {Object} }
 ```
-Sends metrits object with parameters on complete page load.
-metrics
-
-// time to connect
-timeToConnect
-
-// time to first byte
-timeToFirstByte
-
-// time to complete content download
-timeToCompleteContentDownload
-
-// time to dom became interactive
-timeToDomInteractive 
-
-// time to load DOM
-timeToLoad
-
-// time to first paint
-timeToFirstPaint
+Sends `metrics` object with parameters on complete page load.
+```
+metrics: {
+	timeToConnect // time to connect
+	timeToFirstByte // time to first byte
+	timeToCompleteContentDownload // time to complete content download
+	timeToDomInteractive // time to dom became interactive
+	timeToLoad // time to load DOM
+	timeToFirstPaint // time to first paint
+}
+```
 
 
 Sends ajaxMetrics on each request.
-ajaxMetrics
+
+```
+http://0.0.0.0:8000/images/beacon.gif?requestCount=0&timeStamp=1448963244316&url=http%3A%2F%2F0.0.0.0%3A8000%2Fresponse.json&timing%5BtimeToReceive%5D=5.860000000000582&timing%5BtimeToProcess%5D=5.899999999994179&timing%5BtimeToResponseReady%5D=6.634999999994761
+```
+
+Where each request has object with performance information.
 ```
 {
-  requestCount
-  timeStamp
-  url
-  timing
+	requestCount
+  	timeStamp
+  	url
+  	timing
 }
 ```
 			  
-Where timing has properties:			  
-// time to receive a response
-timeToReceive
-              
-// time to process a response
-timeToProcess
+Where timing has properties:
 
-// time to response is ready
-timeToResponseReady
-             
+```
+timing: {
+	timeToReceive 		// time to receive a response
+	timeToProcess 		// time to process a response
+	timeToResponseReady	// time to response is ready
+}
+
+```
 
 
 # TODO's and considerations.
