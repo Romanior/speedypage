@@ -1,14 +1,18 @@
 # Speedypage
 Collect performance and ajax metrics, send to the server by 'beacon', e.g.
-```
-http://0.0.0.0:8000/images/beacon.gif?timeToConnect=1&timeToFirstByte=3&timeToCompleteContentDownload=5&timeToDomInteractive=184&timeToLoad=437&timeToFirstPaint=448
-```
 
+# Usage
+## In the console:
 ```
 >>> metric
 >>> Object { ajaxMetrics: {Array}, metrics: {Object} }
 ```
+## With a server:
 Sends `metrics` object with parameters on complete page load.
+```
+http://0.0.0.0:8000/images/beacon.gif?timeToConnect=1&timeToFirstByte=3&timeToCompleteContentDownload=5&timeToDomInteractive=184&timeToLoad=437&timeToFirstPaint=448
+```
+
 ```
 metrics: {
 	timeToConnect // time to connect
@@ -49,7 +53,7 @@ timing: {
 ```
 
 
-# TODO's and considerations.
+# TODO's and considerations
 
 ## Handling slow or unavailable connection
 
@@ -64,7 +68,6 @@ portion of the queue to the server when connection is back.
 * Add IE9 url support for ajax metrics
 * Check if the DNS lookup takes time and notify about it as well.
 * Choose the correct start point for relative timings, consider parameters, can be navigationStart for example.
-* Investigate why Chrome set sometimes firstPaintTime to 0.
 * Load Metric script in non-blocking way, by attaching <script> tag to head.
 * Add more metrics for ajax, time to connect, for example.
 * add tests
